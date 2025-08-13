@@ -8,20 +8,20 @@ on:
     branches:
       - main
 
-jobs:
-  inform_about_apply:
-    name: Inform About Apply
-    runs-on: ubuntu-20.04
+#jobs:
+  #inform_about_apply:
+    #name: Inform About Apply
+    #runs-on: ubuntu-20.04
 
-    steps:
-      - name: Inform on PR that Apply is Running
-        uses: mshick/add-pr-comment@v1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: 'github-actions[bot]'
-          message: |
-            ***Running terraform apply***
-            Results will display here momentarily...
+    #steps:
+      #- name: Inform on PR that Apply is Running
+        #uses: mshick/add-pr-comment@v1
+        #with:
+          #repo-token: ${{ secrets.GITHUB_TOKEN }}
+          #repo-token-user-login: 'github-actions[bot]'
+          #message: |
+            #***Running terraform apply***
+            #Results will display here momentarily...
 
   plan_and_apply:
     name: Plan and Apply
